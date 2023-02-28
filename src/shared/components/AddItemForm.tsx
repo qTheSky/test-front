@@ -15,6 +15,7 @@ export const AddItemForm = React.memo(function ({addItemCallBack, label, disable
     const addItemHandler = async () => {
         if (title.trim() !== '') {
             addItemCallBack(title)
+            setTitle('')
         } else {
             setError('Title is required')
         }
